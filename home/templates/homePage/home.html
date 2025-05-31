@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static 'homePage/css/style.css' %}">
+</head>
+<body>
+     <!-- Title Bar -->
+     {% if alert_message %}
+        <script>
+            alert("{{ alert_message }}");
+        </script>
+  {% endif %}
+    <div class="title-bar">
+        <div class="title" ><h1>Welcome to InventoryPulse</h1></div>
+        <div class="user-actions">
+            <span class="username">Logged in as: {{ user.username }}</span>
+            <a href="{% url 'logout' %}" class="logout-button">Logout</a>
+        </div>
+    </div>
+<p>Hello world</p>
+</body>
+</html>
