@@ -6,8 +6,10 @@ charset-normalizer==3.4.1
 colorama==0.4.6
 Django==5.2a1
 django-storages==1.14.6
+gunicorn==23.0.0
 idna==3.10
 jmespath==1.0.1
+packaging==25.0
 pillow==11.1.0
 python-dateutil==2.9.0.post0
 qrcode==8.0
@@ -17,4 +19,4 @@ six==1.17.0
 sqlparse==0.5.3
 tzdata==2024.2
 urllib3==2.3.0
-gunicorn==23.0.0
+whitenoise==6.9.0
