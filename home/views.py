@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.views.decorators.cache import never_cache
 from .middlewares import auth
 # Create your views here.
+@never_cache
 @auth
 def homePage(request):
     user = request.user
