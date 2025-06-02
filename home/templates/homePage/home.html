@@ -23,10 +23,10 @@
     </div>
 <p>Hello world</p>
 
-<button onclick="goToAnotherView()">Go to Dashboard</button>
+<button onclick="goToAnotherView()">Go to index page</button>
 
     <script>
-        const index = {% url 'index' %}
+        const index = "{% url 'index' %}"
         function goToAnotherView() {
             window.location.href = index;
         }
