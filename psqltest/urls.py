@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+from home.views import session_check
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('login.urls')),
     path('inventoryPulse/', include('home.urls')),
     path('index/', include('index.urls')),
+    path('session-check/', session_check, name='session_check'),
 ]

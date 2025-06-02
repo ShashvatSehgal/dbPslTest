@@ -10,6 +10,11 @@
 <body>
     <div class="login-container">
         <h1>User Login</h1>
+        {% if alert_message %}
+            <div class="alert alert-{{ alert_type }}">
+                {{ alert_message }}
+            </div>
+        {% endif %}
         {% if form.errors %}
             <div class="error-messages">
                 <ul>
@@ -30,5 +35,6 @@
             <button type="submit" class="btn-login">Login</button>
         </form>
     </div>
+    <script src="{% static 'accessControl/js/all.js' %}"></script>
 </body>
 </html>
