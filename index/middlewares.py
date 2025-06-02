@@ -1,10 +1,10 @@
+from functools import wraps
 from django.shortcuts import redirect
 
-
-# *************** Authenticated  **************
 def auth(viewFunction):
-    def wrappedView(request,*args,**kwargs):
-        if request.user.is_authenticated == False:
+    @wraps(viewFunction)
+    def wrappedView(request, *args, **kwargs):
+        if not request.user.is_authenticated:
             return redirect('login')
-        return viewFunction(request,*args,**kwargs)
+        return viewFunction(request, *args, **kwargs)
     return wrappedView
